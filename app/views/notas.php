@@ -13,6 +13,8 @@ $notasCtrl = new NotasController();
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Notas</title>
+	<!-- CSS personalizado -->
+	<link rel="stylesheet" href="./css/style.css">
 	<!--Import Google Icon Font-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- Compiled and minified CSS -->
@@ -25,10 +27,13 @@ $notasCtrl = new NotasController();
 	</header>
 
 	<main class="container">
-		<div>
-
-			<i class="material-icons right">add</i>
+		
+		<div class="right addLink">
+			<a href="./addNota.php" class="btn-floating btn-large blue">
+				<i class="large material-icons">add</i>
+			</a>
 		</div>
+
 		<table>
 			<thead>
 				<tr>
@@ -47,14 +52,14 @@ $notasCtrl = new NotasController();
 						<td>', $nota['id_nota'], '</td>
 						<td>', $nota['titulo_nota'], '</td>
 						<td>', $nota['contenido_nota'], '</td>
-						<td>
-						<form action="../controller/editNota.php">
+						<td class="row">
+						<form action="../controller/editNota.php" method="post" class="col">
 						<input type="hidden" name="id" value="', $nota['id_nota'], '">
-						<button type="submit">Editar</button>
+						<button type="submit" class="waves-effect blue darken-1 btn" >Editar</button>
 					</form>
-					<form action="../controller/deleteNota.php">
+					<form action="../controller/delete.php" method="post" class="col">
 						<input type="hidden" name="id" value="', $nota['id_nota'], '">
-						<button type="submit">eliminar</button>
+						<button type="submit" class="waves-effect red darken-4 btn" >eliminar</button>
 					</form>
 						</td>
 					</tr>';
