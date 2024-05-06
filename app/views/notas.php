@@ -53,7 +53,7 @@ $notasCtrl = new NotasController();
 						<td>', $nota['titulo_nota'], '</td>
 						<td>', $nota['contenido_nota'], '</td>
 						<td class="row">
-						<form action="../controller/editNota.php" method="post" class="col">
+						<form action="editNota.php" method="post" class="col">
 						<input type="hidden" name="id" value="', $nota['id_nota'], '">
 						<button type="submit" class="waves-effect blue darken-1 btn" >Editar</button>
 					</form>
