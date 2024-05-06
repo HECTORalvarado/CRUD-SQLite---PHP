@@ -23,8 +23,11 @@ class NotasController {
 		die();
 	}
 
-	public function editNota ($id) {
-
+	public function editNota ($id, $title, $content) {
+		echo $id;
+		$this->notasModel->editNota($id, $title, $content);
+		header("Location: /app/views/notas.php");
+		die();
 	}
 
 	public function deleteNota ($id) {
