@@ -44,7 +44,7 @@ foreach($notas as $nota){
 		Agregar Notas
 	</h2>
 	<form action="../controller/editNota.php" method="post" class="row">
-		<input type="hidden" name="idNota" value=value=<?php echo $idNota; ?>>
+		<input type="hidden" name="idNota" value=<?php echo $idNota; ?>>
 		<div class="input-field col s8">
 			<i class="material-icons prefix">mode_edit</i>
 			<input type="text" id="tituloNota" name="tituloNota" class="materialize-textarea" value=<?php echo $tituloNota; ?> required></input>
