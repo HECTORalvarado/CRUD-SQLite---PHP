@@ -13,16 +13,24 @@ class NotasController {
 		return $this->notasModel->getAllNotes();
 	}
 
-	public function addNota () {
+	public function getNotasById($id) {
+		return $this->notasModel->getNotaByID($id);
+	}
+
+	public function addNota ($title, $content) {
+		$this->notasModel->addNota($title, $content);
+		header("Location: /app/views/notas.php");
+		die();
+	}
+
+	public function editNota ($id) {
 
 	}
 
-	public function editNota () {
-
-	}
-
-	public function deletNota () {
-
+	public function deleteNota ($id) {
+		$this->notasModel->deleteNota($id);
+		header("Location: /app/views/notas.php");
+		die();
 	}
 
 }
