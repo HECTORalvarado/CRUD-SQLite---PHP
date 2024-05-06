@@ -50,11 +50,7 @@ class NotasModel
 
 	public function editNota($idNota, $tituloNota, $contenidoNota)
 	{
-		$query = "UPDATE Notas
-		SET id_nota = $idNota,
-			titulo_nota = '$tituloNota',
-			contenido_nota = '$contenidoNota'
-	  	WHERE id_nota = $idNota";
+		$query = "UPDATE Notas SET titulo_nota = '$tituloNota', contenido_nota = '$contenidoNota' WHERE id_nota = $idNota";
 
 		$statement = $this->PDO->prepare($query);
 
