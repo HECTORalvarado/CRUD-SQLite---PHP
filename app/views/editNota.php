@@ -41,7 +41,7 @@ foreach($notas as $nota){
 
 <body class="container">
 	<h2 class="">
-		Agregar Notas
+		Editar Nota
 	</h2>
 	<form action="../controller/editNota.php" method="post" class="row">
 		<input type="hidden" name="idNota" value=<?php echo $idNota; ?>>
